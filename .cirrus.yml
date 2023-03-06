@@ -38,14 +38,18 @@ task:
   Setup_script:
       - git config --global user.name "Sushrut1101"
       - git config --global user.email "guptasushrut@gmail.com"
-      - cd Dumper-Script
+      - cd dumper 
       - echo "$GITLAB_TOKEN" > .gitlab_token
       - echo "$GITLAB_GROUP" > .gitlab_group
       - echo "$TG_CHAT" > .tg_chat
       - echo "$TG_TOKEN" > .tg_token
       - echo "$GITLAB_INSTANCE" > .gitlab_instance
-      - sudo bash setup.sh
+      - chmod a+x setup.sh
+      - bash setup.sh
+      
+    
 
   DumprX_script:
-      - cd Dumper-Script || echo "Already in the Directory"
-      - ./dumper.sh $(< ${CIRRUS_WORKING_DIR}/ROM_URL.txt)
+      - cd dumper || echo "Already in the Directory"
+      - chmod a+x dumprx.sh
+      - bash dumprx.sh  $(< ${CIRRUS_WORKING_DIR}/ROM_URL.txt)
