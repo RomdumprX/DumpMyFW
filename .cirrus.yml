@@ -11,7 +11,7 @@ env:
   GITLAB_INSTANCE: www.opencode.net
   
   # Private SSH Key
-  PRIV_SSH_KEY: ENCRYPTED[4303c0a6cdb653ff2393d5ce7a0cb056b8b8fa29b7e0fe0a9e531c241c6fa6a9e4c2b937970d2145fe4e5b998a0acc2e]
+  PRIV_SSH_KEY: ENCRYPTED[072ad4863d7705a64f1c898b4b4a1914de181e9fa12926d953db9595648f3df70ac4c9d0c822e1f90f31f482d93cacd7]
 
 task:
   name: "Firmware Dump by DumprX"
@@ -21,8 +21,8 @@ task:
   timeout_in: 120m
   container:
       image: ghcr.io/sushrut1101/docker:arch
-      cpu: 4
-      memory: 16G
+      cpu: 5
+      memory: 20G
 
   Clone_script:
       - git clone --depth=1 --single-branch https://github.com/DumprX/DumprX.git
