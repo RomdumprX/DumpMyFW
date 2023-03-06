@@ -25,7 +25,7 @@ task:
       memory: 20G
 
   Clone_script:
-      - git clone --depth=1 --single-branch https://github.com/neilchetty/Dumper-Script.git
+      - git clone --depth=1 --single-branch https://github.com/neilchetty/Dumper-Scripts dumper
   
   Set-SSH-Keys_script:
       - mkdir -p ~/.ssh
